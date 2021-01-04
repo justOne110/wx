@@ -1,0 +1,60 @@
+.car{
+  width: 100%;
+  min-height: 1200rpx;
+  background: #f0f0f0;
+  position: relative;
+}
+.tip{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-70%);
+  width: 100%;
+  /* min-height: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tip>view:nth-of-type(1){
+  margin-top: 40rpx;
+  font-size: 34rpx;
+  color: #bbb4b4;
+}
+.tip>button{
+  margin-top: 40rpx;
+  color: #fff;
+  background: #e64340;
+  border-radius: 6px;
+  width: 300rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  font-size: 28rpx;
+}
+.tip>image{
+  width: 120rpx;
+  height: 120rpx;
+}
+.shopCard{
+  border-bottom:solid 1rpx #f1dbdb;
+  margin-bottom: 10rpx;
+  background: #ffffff;
+  padding-bottom: 20rpx;
+  position: relative;
+
+}
+.van-card{
+  background: #ffffff;
+}
+.cardel{
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  top: 32rpx;
+  right: 32rpx;
+}
+.cardel>image{
+  width: 100%;
+  height: 100%;
+}

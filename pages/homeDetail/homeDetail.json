@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "drl-swiper":"../../components/swiper/swiper",
+    "van-goods-action": "@vant/weapp/goods-action/index",
+    "van-goods-action-icon": "@vant/weapp/goods-action-icon/index",
+    "van-goods-action-button": "@vant/weapp/goods-action-button/index",
+    "parser":"/components/parser.20200414.min/parser"
+    
+  },
+  "navigationBarTitleText": "商品详情"
+
+}

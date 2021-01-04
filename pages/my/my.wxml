@@ -1,0 +1,28 @@
+<view class="login">
+<view class="hearder" wx:if="{{apiUserInfoMap}}">
+<image src="{{apiUserInfoMap.base.avatarUrl}}"></image>
+
+<view>
+    <view>{{apiUserInfoMap.base.id}}</view>
+  <view>{{apiUserInfoMap.base.nick}}</view>
+
+</view>
+
+</view>
+
+
+<view class="hearder" wx:else>
+<image src="/assets/nologin.png"></image>
+
+<view>
+  
+  <van-button  
+   size="small" open-type="getUserInfo" 
+    bindgetuserinfo="processLogin">
+   立即登录</van-button>
+</view>
+
+</view>
+<van-cell wx:if="{{apiUserInfoMap}}" 
+title="退出登录" is-link bindtap="loginOut" />
+</view>

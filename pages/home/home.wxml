@@ -1,0 +1,104 @@
+
+<scroll-view scroll-y 
+lower-threshold="100" 
+bindscroll="scrollPosition"
+scroll-with-animation="true" 
+scroll-top="{{topPosition}}"  
+style="height:100vh">
+<!--pages/home/home.wxml-->
+<view class="bannerWrap">
+  <view class="banner">
+    <view class="homesearch">
+      <van-search value="{{ value }}" placeholder="请输入搜索关键词" background="transparent" shape="round" />
+    </view>
+    <drl-swiper images="{{banner}}"></drl-swiper>
+  </view>
+  <van-notice-bar bindtap="affDetail" background="#ffffff" left-icon="volume-o" text="{{tip[0].title}}" data-_id="{{tip[0].id}}"/>
+  <!-- 九宫格 -->
+  <view class="grid">
+    <view class="homeItem" wx:for="{{gridList}}" wx:key="index" bindtap="goClass" data-homeId="{{item.id}}">
+      <image src="{{item.icon}}" />
+      <view>{{item.name}}</view>
+    </view>
+  </view>
+  <!-- 限时秒杀 -->
+  <van-divider contentPosition="center" customStyle="color: #dddddd; border-color: #dddddd; font-size: 14px;">
+    限时秒杀
+  </van-divider>
+  <view class="seckill">
+    <view class="seckillItem">
+      <view class="seckillImg">
+        <image src="{{seckill.pic}}"></image>
+
+      </view>
+      <view class="seckillRight">
+        <view>{{seckill.name  }}</view>
+        <view>
+          <van-progress percentage="100" color="#ee0a24" show-pivot="false" stroke-width="12rpx" />
+        </view>
+        <view class="price">
+          <text>￥{{seckill.minPrice}}</text>
+          <text>￥{{seckill.originalPrice}}</text>
+          <text bindtap="homedetail" data-_dId="{{seckill.id}}">已结束</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 爆品推荐 -->
+  <van-divider contentPosition="center" customStyle="color: #dddddd; border-color: #dddddd; font-size: 14px;">
+    爆品推荐
+  </van-divider>
+  <view class="reco">
+    <view class="recoItem" bindtap="homedetail" data-_dId="{{reco.id}}">
+      <image src="{{reco.pic}}"></image>
+      <view>{{reco.name}}</view>
+      <view>￥{{reco.minPrice}}</view>
+    </view>
+
+    <view class="recoItem" bindtap="homedetail" data-_dId="{{reco2.id}}">
+      <image src="{{reco2.pic}}"></image>
+      <view>{{reco2.name}}</view>
+      <view>￥{{reco2.minPrice}}</view>
+    </view>
+  </view>
+
+  <!-- 爆品推荐 -->
+  <van-divider contentPosition="center" customStyle="color: #dddddd; border-color: #dddddd; font-size: 14px;">
+    全名拼团
+  </van-divider>
+  <view class="group">
+    <view class="groupItem" bindtap="homedetail" data-_dId="{{group.id}}">
+      <view class="groupImg">
+        <image src="{{group.pic}}"></image>
+
+      </view>
+      <view class="groupTitle">{{group.name}}</view>
+      <view class="groupTip">{{group.characteristic}}</view>
+      <view class="groupPrice">
+        <text>￥{{group.minPrice}}</text>
+        <text>￥{{group.originalPrice}}</text>
+      </view>
+    </view>
+  </view>
+  <van-divider contentPosition="center" customStyle="color: #dddddd; border-color: #dddddd; font-size: 14px;">
+    商品列表
+  </van-divider>
+
+<view class="homelist">
+  <view class="listItem" wx:for="{{list}}" wx:key="index"  bindtap="homedetail" data-_dId="{{item.id}}">
+    <view><image src="{{item.pic}}"></image></view>
+    <view class="listTitle">{{item.name}}</view>
+    <view class="listPrice">
+      <text>￥{{item.minPrice}}</text>
+      <text>￥{{item.originalPrice}}</text>
+
+    </view>
+  </view>
+</view>
+
+<view class="backTop" wx:if="{{backTopFlag}}" bindtap="backTap" >
+  <image src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2324384596,374630045&fm=26&gp=0.jpg"></image>
+</view>
+</view>
+</scroll-view>

@@ -1,0 +1,25 @@
+<view class="car">
+
+  <view class="tip" wx:if="{{flag == false}}">
+    <image src="/assets/cart-off.png"></image>
+    <view>购物车空空如也~~</view>
+    <button>去逛逛</button>
+  </view>
+
+  <view class="shopCard" wx:if="{{flag == true}}" wx:for="{{carList}}" wx:key="index">
+    <van-card price="{{item.price}}" title="{{item.name}}" thumb="{{ item.pic }}">
+      <!-- {{num}} -->
+      <view slot="footer">
+        <van-stepper value="{{item.number}}" bind:change="onChange" data-key="{{item.key}}" bind:overlimit="jian" />
+      </view>
+    </van-card>
+    <view class="cardel" bindtap="delCar" data-key="{{item.key}}">
+      <image src="../../assets/del.png"></image>
+    </view>
+  </view>
+
+
+  <van-submit-bar price="{{ 3050 }}" button-text="提交订单" bind:submit="onSubmit" wx:if="{{flag}}" />
+  <!-- 对话框 -->
+  <van-dialog id="van-dialog" />
+</view>

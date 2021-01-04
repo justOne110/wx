@@ -1,0 +1,15 @@
+{
+  "usingComponents": {
+    "van-sidebar": "@vant/weapp/sidebar/index",
+    "van-sidebar-item": "@vant/weapp/sidebar-item/index",
+    "van-empty": "@vant/weapp/empty/index",
+    "van-card": "@vant/weapp/card/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-dialog": "@vant/weapp/dialog/index"
+     
+  },
+  "navigationBarTextStyle":"black",
+  "navigationBarTitleText":"分类"
+  
+}

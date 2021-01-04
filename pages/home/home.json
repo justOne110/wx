@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "drl-swiper":"../../components/swiper/swiper",
+    "van-search": "@vant/weapp/search/index",
+    "van-notice-bar": "@vant/weapp/notice-bar/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-progress": "@vant/weapp/progress/index"
+  },
+ "navigationBarTextStyle":"black",
+ "navigationBarTitleText":"天使童装"
+}

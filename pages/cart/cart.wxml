@@ -1,0 +1,32 @@
+<view class="cartwrap">
+  <view class="cartleft">
+    <van-sidebar active-key="{{ activeKey }}">
+      <van-sidebar-item title="{{item.name}}" wx:for="{{leftList}}" wx:key="index" data-_id="{{item.id}}"
+        bindtap="getLeftId" />
+  
+    </van-sidebar>
+  </view>
+  <view class="cartright">
+    <!-- 暂无商品 -->
+    <van-empty description="暂无商品" wx:if="{{rightflag == true}}" />
+    <view class="card">
+
+
+      <van-card wx:if="{{rightflag == false}}" wx:for="{{cartlist}}" wx:key="index" price="{{item.minPrice}}"
+        title="{{item.name}}" thumb="{{item.pic}}">
+        <view slot="footer" class="cardicon" bindtap="joinCar" data-id="{{item.id}}">
+          <!-- 请提示 -->
+          <van-toast id="van-toast" />
+
+          <van-icon name="shopping-cart-o" size="48rpx" color="#C12A17"></van-icon>
+        </view>
+      </van-card>
+    </view>
+
+    <!-- 对话框  -->
+    <van-dialog id="van-dialog" />
+  </view>
+
+  <!-- desc="{{item.minBuyNumber}}" -->
+
+</view>

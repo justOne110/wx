@@ -1,0 +1,6 @@
+<view class="affWrap">
+<view>{{detailList.title}}</view>
+
+  <!--   <rich-text nodes="{{detailList.content}}"></rich-text> -->
+
+</view>

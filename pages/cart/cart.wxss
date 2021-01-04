@@ -1,0 +1,16 @@
+.cartwrap{
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.cartright{
+  width: 100%;
+}
+.card{
+  position: relative;
+}
+.cardicon{
+  position: absolute;
+  right: 30rpx;
+  bottom: 30rpx;
+}

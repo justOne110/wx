@@ -1,0 +1,10 @@
+.affWrap{
+  padding: 34rpx;
+  font-size:26rpx;
+  color: #333333;
+}
+.affWrap view:nth-of-type(1){
+  font-weight: bold;
+  padding-bottom: 32rpx;
+  border-bottom: 1rpx solid #eeeeee ;
+}
